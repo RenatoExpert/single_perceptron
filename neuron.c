@@ -6,7 +6,7 @@
 #define WEIGHT 3.0
 #define BIAS 1.0
 
-double aa = 1;
+double weight = 1;
 double bb = 1;
 
 int calc();
@@ -38,10 +38,10 @@ int calc (void) {
 		double x = get_random_double();
 		error = error_quad(aa,x,bb);
 		printf("-----\nNew Epoch\n-----\n"); 
-		printf("Weight is: %f\n", aa);
+		printf("Weight is: %f\n", weight);
 		printf("Bias is: %f\n", bb);
 		printf("x is: %f\n", x);
-		printf("Predicted y is: %f\n", prediction(aa, x, bb));
+		printf("Predicted y is: %f\n", prediction(weight, x, bb));
 		printf("Real y is: %f\n", real_value(x));
 		printf("Error is: %f\n", error);
 		train(x);
