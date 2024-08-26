@@ -50,6 +50,10 @@ int calc (void) {
 	return 0;
 }
 
+double get_random_double () {
+	return ((double)rand() / RAND_MAX) * 50.0;
+}
+
 double error_quad (double a,double x,double b) {
 	double error = ((a*x+b)-(WEIGHT *x + BIAS))*((a*x+b)-(WEIGHT * x + BIAS));
 	return(error);
@@ -73,10 +77,6 @@ double prediction (double a, double x, double b) {
 double real_value (double x) {
 	double real_value_is = WEIGHT * x + BIAS;
 	return(real_value_is);
-}
-
-double get_random_double () {
-	return ((double)rand() / RAND_MAX) * 50.0;
 }
 
 void train (double x) {
