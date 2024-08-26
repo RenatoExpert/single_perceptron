@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 #define RATE .0005
 #define WEIGHT 3.0
 #define BIAS 1.0
 
 double aa = 1;
-
 double bb = 1;
 
 double get_random_double();
@@ -17,7 +17,15 @@ double derivative_a (double a, double x, double b);
 double derivative_b (double a, double x, double b);
 void train(double x);
 
-int main(void) {
+int main (int argc, char *argv[]) {
+	for (int opt_i = 0; opt_i < argc; opt_i++) {
+		char parameter[] = argv[opt_i];
+		printf("opt_i=%d parameter=%s", opt_i, parameter);
+	}
+	int calc ();
+}
+
+int calc (void) {
 	// Seed the random number generator
 	srand(time(NULL));
 
