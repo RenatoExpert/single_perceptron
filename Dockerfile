@@ -4,6 +4,7 @@ COPY . .
 RUN gcc neuron.c -o neuron
 
 FROM scratch AS run
-COPY --from=compile /app/neuron . 
+WORKDIR /app
+COPY --from=compile /app/neuron .
 ENTRYPOINT ["./neuron"]
 
