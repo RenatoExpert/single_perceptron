@@ -24,7 +24,7 @@ int main (int argc, char *argv[]) {
 		printf("opt_i=%d parameter=%s \n", opt_i, parameter);
 		opt_i ++;
 	}
-	int calc ();
+	return calc();
 }
 
 int calc (void) {
