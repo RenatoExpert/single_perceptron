@@ -9,7 +9,7 @@
 double aa = 1;
 double bb = 1;
 
-void calc();
+int calc();
 double get_random_double();
 double real_value (double x);
 double prediction (double a, double x, double b);
