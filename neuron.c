@@ -18,7 +18,7 @@ double derivative_b (double a, double x, double b);
 void train(double x);
 
 int main (int argc, char *argv[]) {
-	int opt_i = 0;
+	int opt_i = 1;
 	while (opt_i < argc) {
 		char *parameter = argv[opt_i];
 		printf("opt_i=%d parameter=%s \n", opt_i, parameter);
